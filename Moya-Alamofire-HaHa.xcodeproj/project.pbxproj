@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BADB19A273137E70075D4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB199273137E70075D4BC /* AppDelegate.swift */; };
+		5BADB19E273137E70075D4BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB19D273137E70075D4BC /* ViewController.swift */; };
+		5BADB1A1273137E70075D4BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BADB19F273137E70075D4BC /* Main.storyboard */; };
+		5BADB1A3273137EC0075D4BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BADB1A2273137EC0075D4BC /* Assets.xcassets */; };
+		5BADB1A6273137EC0075D4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BADB1A4273137EC0075D4BC /* LaunchScreen.storyboard */; };
+		5BADB1B7273139170075D4BC /* NetworkStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1AF273139170075D4BC /* NetworkStatusManager.swift */; };
+		5BADB1B8273139170075D4BC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B0273139170075D4BC /* Networking.swift */; };
+		5BADB1B9273139170075D4BC /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B1273139170075D4BC /* NetworkPlugin.swift */; };
+		5BADB1BA273139170075D4BC /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B2273139170075D4BC /* ObservableExtension.swift */; };
+		5BADB1BB273139170075D4BC /* MyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B3273139170075D4BC /* MyResponse.swift */; };
+		5BADB1BC273139170075D4BC /* LoginRegisterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B5273139170075D4BC /* LoginRegisterApi.swift */; };
+		5BADB1BD273139170075D4BC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B6273139170075D4BC /* AppService.swift */; };
+		5BADB1BF273139360075D4BC /* EnDecryptTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1BE273139360075D4BC /* EnDecryptTool.swift */; };
+		AC4DCA2640BDEF0D3196E237 /* Pods_Moya_Alamofire_HaHa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D47E32077FED296333E189 /* Pods_Moya_Alamofire_HaHa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28D47E32077FED296333E189 /* Pods_Moya_Alamofire_HaHa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya_Alamofire_HaHa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF9E766D491EC2BD890F63A /* Pods-Moya-Alamofire-HaHa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-Alamofire-HaHa.release.xcconfig"; path = "Target Support Files/Pods-Moya-Alamofire-HaHa/Pods-Moya-Alamofire-HaHa.release.xcconfig"; sourceTree = "<group>"; };
+		5BADB196273137E70075D4BC /* Moya-Alamofire-HaHa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moya-Alamofire-HaHa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BADB199273137E70075D4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BADB19D273137E70075D4BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BADB1A0273137E70075D4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BADB1A2273137EC0075D4BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BADB1A5273137EC0075D4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BADB1A7273137EC0075D4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BADB1AF273139170075D4BC /* NetworkStatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatusManager.swift; sourceTree = "<group>"; };
+		5BADB1B0273139170075D4BC /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		5BADB1B1273139170075D4BC /* NetworkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPlugin.swift; sourceTree = "<group>"; };
+		5BADB1B2273139170075D4BC /* ObservableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
+		5BADB1B3273139170075D4BC /* MyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyResponse.swift; sourceTree = "<group>"; };
+		5BADB1B5273139170075D4BC /* LoginRegisterApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegisterApi.swift; sourceTree = "<group>"; };
+		5BADB1B6273139170075D4BC /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		5BADB1BE273139360075D4BC /* EnDecryptTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnDecryptTool.swift; sourceTree = "<group>"; };
+		8A367870A41675020B0819F3 /* Pods-Moya-Alamofire-HaHa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-Alamofire-HaHa.debug.xcconfig"; path = "Target Support Files/Pods-Moya-Alamofire-HaHa/Pods-Moya-Alamofire-HaHa.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BADB193273137E70075D4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4DCA2640BDEF0D3196E237 /* Pods_Moya_Alamofire_HaHa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		429031001936BD8FEF66FE74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28D47E32077FED296333E189 /* Pods_Moya_Alamofire_HaHa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BADB18D273137E70075D4BC = {
+			isa = PBXGroup;
+			children = (
+				5BADB198273137E70075D4BC /* Moya-Alamofire-HaHa */,
+				5BADB197273137E70075D4BC /* Products */,
+				BEFE4DD24A13356DE4087F03 /* Pods */,
+				429031001936BD8FEF66FE74 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5BADB197273137E70075D4BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BADB196273137E70075D4BC /* Moya-Alamofire-HaHa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BADB198273137E70075D4BC /* Moya-Alamofire-HaHa */ = {
+			isa = PBXGroup;
+			children = (
+				5BADB1AD273139170075D4BC /* Network */,
+				5BADB199273137E70075D4BC /* AppDelegate.swift */,
+				5BADB19D273137E70075D4BC /* ViewController.swift */,
+				5BADB19F273137E70075D4BC /* Main.storyboard */,
+				5BADB1A2273137EC0075D4BC /* Assets.xcassets */,
+				5BADB1A4273137EC0075D4BC /* LaunchScreen.storyboard */,
+				5BADB1A7273137EC0075D4BC /* Info.plist */,
+			);
+			path = "Moya-Alamofire-HaHa";
+			sourceTree = "<group>";
+		};
+		5BADB1AD273139170075D4BC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5BADB1BE273139360075D4BC /* EnDecryptTool.swift */,
+				5BADB1AE273139170075D4BC /* Core */,
+				5BADB1B4273139170075D4BC /* Api */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BADB1AE273139170075D4BC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5BADB1AF273139170075D4BC /* NetworkStatusManager.swift */,
+				5BADB1B0273139170075D4BC /* Networking.swift */,
+				5BADB1B1273139170075D4BC /* NetworkPlugin.swift */,
+				5BADB1B2273139170075D4BC /* ObservableExtension.swift */,
+				5BADB1B3273139170075D4BC /* MyResponse.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5BADB1B4273139170075D4BC /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5BADB1B5273139170075D4BC /* LoginRegisterApi.swift */,
+				5BADB1B6273139170075D4BC /* AppService.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		BEFE4DD24A13356DE4087F03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A367870A41675020B0819F3 /* Pods-Moya-Alamofire-HaHa.debug.xcconfig */,
+				3BF9E766D491EC2BD890F63A /* Pods-Moya-Alamofire-HaHa.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BADB195273137E70075D4BC /* Moya-Alamofire-HaHa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BADB1AA273137EC0075D4BC /* Build configuration list for PBXNativeTarget "Moya-Alamofire-HaHa" */;
+			buildPhases = (
+				6C072A474116D46D5210569A /* [CP] Check Pods Manifest.lock */,
+				5BADB192273137E70075D4BC /* Sources */,
+				5BADB193273137E70075D4BC /* Frameworks */,
+				5BADB194273137E70075D4BC /* Resources */,
+				2736E5EB307F20CDC6825786 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Moya-Alamofire-HaHa";
+			productName = "Moya-Alamofire-HaHa";
+			productReference = 5BADB196273137E70075D4BC /* Moya-Alamofire-HaHa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BADB18E273137E70075D4BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					5BADB195273137E70075D4BC = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 5BADB191273137E70075D4BC /* Build configuration list for PBXProject "Moya-Alamofire-HaHa" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BADB18D273137E70075D4BC;
+			productRefGroup = 5BADB197273137E70075D4BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BADB195273137E70075D4BC /* Moya-Alamofire-HaHa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BADB194273137E70075D4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BADB1A6273137EC0075D4BC /* LaunchScreen.storyboard in Resources */,
+				5BADB1A3273137EC0075D4BC /* Assets.xcassets in Resources */,
+				5BADB1A1273137E70075D4BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2736E5EB307F20CDC6825786 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moya-Alamofire-HaHa/Pods-Moya-Alamofire-HaHa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moya-Alamofire-HaHa/Pods-Moya-Alamofire-HaHa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moya-Alamofire-HaHa/Pods-Moya-Alamofire-HaHa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C072A474116D46D5210569A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moya-Alamofire-HaHa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BADB192273137E70075D4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BADB1B9273139170075D4BC /* NetworkPlugin.swift in Sources */,
+				5BADB1BD273139170075D4BC /* AppService.swift in Sources */,
+				5BADB1BC273139170075D4BC /* LoginRegisterApi.swift in Sources */,
+				5BADB1BB273139170075D4BC /* MyResponse.swift in Sources */,
+				5BADB1BF273139360075D4BC /* EnDecryptTool.swift in Sources */,
+				5BADB19E273137E70075D4BC /* ViewController.swift in Sources */,
+				5BADB19A273137E70075D4BC /* AppDelegate.swift in Sources */,
+				5BADB1B7273139170075D4BC /* NetworkStatusManager.swift in Sources */,
+				5BADB1BA273139170075D4BC /* ObservableExtension.swift in Sources */,
+				5BADB1B8273139170075D4BC /* Networking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5BADB19F273137E70075D4BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BADB1A0273137E70075D4BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BADB1A4273137EC0075D4BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BADB1A5273137EC0075D4BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BADB1A8273137EC0075D4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BADB1A9273137EC0075D4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BADB1AB273137EC0075D4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A367870A41675020B0819F3 /* Pods-Moya-Alamofire-HaHa.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JR25T43M7A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Moya-Alamofire-HaHa/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "safiri.top.Moya-Alamofire-HaHa";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BADB1AC273137EC0075D4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF9E766D491EC2BD890F63A /* Pods-Moya-Alamofire-HaHa.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JR25T43M7A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Moya-Alamofire-HaHa/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "safiri.top.Moya-Alamofire-HaHa";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BADB191273137E70075D4BC /* Build configuration list for PBXProject "Moya-Alamofire-HaHa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BADB1A8273137EC0075D4BC /* Debug */,
+				5BADB1A9273137EC0075D4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BADB1AA273137EC0075D4BC /* Build configuration list for PBXNativeTarget "Moya-Alamofire-HaHa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BADB1AB273137EC0075D4BC /* Debug */,
+				5BADB1AC273137EC0075D4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BADB18E273137E70075D4BC /* Project object */;
+}

@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (5.4.4)
+  - HandyJSON (5.0.2)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - RxSwift (6.2.0)
+  - SwiftyRSA (1.5.0):
+    - SwiftyRSA/ObjC (= 1.5.0)
+  - SwiftyRSA/ObjC (1.5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - HandyJSON
+  - Moya
+  - Moya/RxSwift
+  - RxSwift
+  - SwiftyRSA
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - HandyJSON
+    - Moya
+    - RxSwift
+    - SwiftyRSA
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
+
+PODFILE CHECKSUM: feb5553d6bcd31a8ee2af75cb6631f758b2a95c2
+
+COCOAPODS: 1.11.2
