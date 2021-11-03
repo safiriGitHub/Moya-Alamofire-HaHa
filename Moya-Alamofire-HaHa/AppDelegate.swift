@@ -98,49 +98,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } onDisposed: {
             
         }.disposed(by: disposeBag)
-
-        
-//        si.flatMap { enPassword in
-//            return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
-//        }.asObservable()
-//            .mapJSON()
-//            .mapHandyModel(type: User.self)
-//            .asSingle()
-//            .subscribe { user in
-//
-//            } onFailure: { error in
-//
-//            } onDisposed: {
-//
-//            }
-//
-//
-//        si.flatMap { enPassword in
-//            return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
-//        }.mapJSON().mapHandyModel(type: User.self)
-        
-        
-        // 两个网络请求
-//        let enPassword = EnDecryptTool.encryptString(dataStr: password, key:pubKey)
-//        func fe(pass: String) -> Single<User> {
-//            
-//        }
-//        let fe2 = { (pass: String) in
-//            return
-//        }
-//        let s2 = provider2.rx.request(.login(phoneNum: "13065015955", enPassword: "few"))
-//            .asObservable()
-//            .mapJSON()
-//            .mapHandyModel(type: User.self)
-//            .asSingle()
-//            .subscribe { person in
-//
-//            } onFailure: { error in
-//
-//            } onDisposed: {
-//
-//            }
-            //.disposed(by: T##DisposeBag)
     }
     
     func example6() {
@@ -155,6 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
         }.asObservable()
             .mapJSON()
+            .map()
             .mapHandyModel(type: User.self)
             .asSingle()
             .subscribe { user in
