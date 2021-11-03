@@ -9,6 +9,7 @@ PODS:
     - Moya/Core
     - RxSwift (~> 6.0)
   - RxSwift (6.2.0)
+  - SwiftyJSON (5.0.1)
   - SwiftyRSA (1.5.0):
     - SwiftyRSA/ObjC (= 1.5.0)
   - SwiftyRSA/ObjC (1.5.0)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Moya
   - Moya/RxSwift
   - RxSwift
+  - SwiftyJSON
   - SwiftyRSA
 
 SPEC REPOS:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - HandyJSON
     - Moya
     - RxSwift
+    - SwiftyJSON
     - SwiftyRSA
 
 SPEC CHECKSUMS:
@@ -34,8 +37,9 @@ SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
 
-PODFILE CHECKSUM: feb5553d6bcd31a8ee2af75cb6631f758b2a95c2
+PODFILE CHECKSUM: ecfc76d399f470f02dcfdc84b5db42b9d2326bdf
 
 COCOAPODS: 1.11.2

@@ -1,6 +1,6 @@
 //
 //  LoginRegisterApi.swift
-//  TouchainNFT
+//  Moya-Alamofire-HaHa
 //
 //  Created by safiri on 2021/11/1.
 //
@@ -33,11 +33,13 @@ extension LoginRegisterApi: TargetType {
     
     var task: Task {
         if requestParamters.isEmpty { return .requestPlain }
-        return .requestParameters(parameters: requestParamters, encoding: JSONEncoding.default)
+        //return .requestParameters(parameters: requestParamters, encoding: JSONEncoding.default) // encoding 不对
+        return .requestParameters(parameters: requestParamters, encoding: URLEncoding.default)
     }
     
     var headers: [String : String]? {
-        return ["Content-type": "application/json"]
+        //return ["Content-type": "application/json"]
+        return ["Content-Type": "application/x-www-form-urlencoded"]
     }
     
 }
@@ -45,12 +47,19 @@ extension LoginRegisterApi: TargetType {
 extension LoginRegisterApi {
     
     var requestParamters : [String: Any] {
+        var params: [String: Any] = [:]
         switch self {
         case .login(let phoneNum, let enPassword):
-            return ["json":["wlAccount" : ["mobile": phoneNum, "password": enPassword], "token":"false"], "token":"false"]
+            params["wlAccount"] = ["mobile": phoneNum, "password": enPassword]
+            params["type"] = 2
+            params = NetworkTool.createParam(params)
+//            return ["json":NetworkTool.getJSONStringFromDictionaryOrArray(element: ["wlAccount":["mobile": phoneNum, "password": enPassword], "type":2]), "token":"false"]
         case .register:
             return ["" : ""]
+        default:
+            return params
         }
+        return params
     }
      
 }

@@ -29,12 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        example4()
      
         example5()
-
-//        var d = Networking<AppService>()
-//        d.provider.request(.createUser(firstName: "", lastName: "")) { result in
-//            //do something
-//
-//        }
         
         return true
     }
@@ -93,8 +87,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let si = provider.rx.request(.getPublicKey).mapString().map { key in
-            EnDecryptTool.encryptString(dataStr: "123456", key: key)
+            EnDecryptTool.encryptString(dataStr: "a123456", key: key)
         }
+        si.flatMap { enPassword in
+            return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
+        }.mapJSON().subscribe { json in
+            print(json)
+        } onFailure: { error in
+            print(error)
+        } onDisposed: {
+            
+        }.disposed(by: disposeBag)
+
+        
+//        si.flatMap { enPassword in
+//            return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
+//        }.asObservable()
+//            .mapJSON()
+//            .mapHandyModel(type: User.self)
+//            .asSingle()
+//            .subscribe { user in
+//
+//            } onFailure: { error in
+//
+//            } onDisposed: {
+//
+//            }
+//
+//
 //        si.flatMap { enPassword in
 //            return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
 //        }.mapJSON().mapHandyModel(type: User.self)
@@ -108,18 +128,69 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let fe2 = { (pass: String) in
 //            return
 //        }
-        let s2 = provider2.rx.request(.login(phoneNum: "13065015955", enPassword: "few"))
-            .asObservable()
+//        let s2 = provider2.rx.request(.login(phoneNum: "13065015955", enPassword: "few"))
+//            .asObservable()
+//            .mapJSON()
+//            .mapHandyModel(type: User.self)
+//            .asSingle()
+//            .subscribe { person in
+//
+//            } onFailure: { error in
+//
+//            } onDisposed: {
+//
+//            }
+            //.disposed(by: T##DisposeBag)
+    }
+    
+    func example6() {
+        let provider = MoyaProvider<AppService>(plugins: [MyNetworkLoggerPlugin.default])
+        let provider2 = MoyaProvider<LoginRegisterApi>(plugins: [MyNetworkLoggerPlugin.default])
+        
+        
+        let si = provider.rx.request(.getPublicKey).mapString().map { key in
+            EnDecryptTool.encryptString(dataStr: "a123456", key: key)
+        }
+        si.flatMap { enPassword in
+            return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
+        }.asObservable()
             .mapJSON()
             .mapHandyModel(type: User.self)
             .asSingle()
-            .subscribe { person in
+            .subscribe { user in
 
             } onFailure: { error in
 
             } onDisposed: {
 
             }
+
+
+//        si.flatMap { enPassword in
+//            return provider2.rx.request(.login(phoneNum: "13065015955", enPassword: enPassword))
+//        }.mapJSON().mapHandyModel(type: User.self)
+        
+        
+        // 两个网络请求
+//        let enPassword = EnDecryptTool.encryptString(dataStr: password, key:pubKey)
+//        func fe(pass: String) -> Single<User> {
+//
+//        }
+//        let fe2 = { (pass: String) in
+//            return
+//        }
+//        let s2 = provider2.rx.request(.login(phoneNum: "13065015955", enPassword: "few"))
+//            .asObservable()
+//            .mapJSON()
+//            .mapHandyModel(type: User.self)
+//            .asSingle()
+//            .subscribe { person in
+//
+//            } onFailure: { error in
+//
+//            } onDisposed: {
+//
+//            }
             //.disposed(by: T##DisposeBag)
     }
 }

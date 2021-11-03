@@ -1,12 +1,12 @@
 //
 //  TouchainService.swift
-//  TouchainNFT
+//  Moya-Alamofire-HaHa
 //
 //  Created by safiri on 2021/10/28.
 //
 
-let BASE_URL = "http://wlys.qiluys.cn/erdos_security"
-
+//let BASE_URL = "http://wlys.qiluys.cn/erdos_security"
+let BASE_URL = "http://wlys.qiluys.cn/yunshun"
 
 import Moya
 import SwiftUI
@@ -88,15 +88,15 @@ extension AppService: TargetType {
     
     var headers: [String: String]? {
         /// 请求头设置
-        return ["Content-type": "application/json"]
-        //return ["Content-Type": "application/x-www-form-urlencoded"]
+//        return ["Content-type": "application/json"]
+        return ["Content-Type": "application/x-www-form-urlencoded"]
     }
     
     // MARK: 自定义方法
     
 }
 // MARK: - Helpers
-private extension String {
+extension String {
     var urlEscaped: String {
         addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
@@ -105,6 +105,7 @@ private extension String {
         Data(self.utf8)
     }
 }
+
 
 
 //class AppService {

@@ -6,10 +6,12 @@ target 'Moya-Alamofire-HaHa' do
   use_frameworks!
   pod 'Alamofire'
   pod 'HandyJSON'
+  pod 'SwiftyJSON'
   pod 'Moya'
   pod 'Moya/RxSwift'
   pod 'RxSwift'
   pod 'SwiftyRSA'
+  
   # Pods for Moya-Alamofire-HaHa
 
 end

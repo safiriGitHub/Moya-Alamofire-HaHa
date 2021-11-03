@@ -14,12 +14,14 @@
 		5BADB1A6273137EC0075D4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BADB1A4273137EC0075D4BC /* LaunchScreen.storyboard */; };
 		5BADB1B7273139170075D4BC /* NetworkStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1AF273139170075D4BC /* NetworkStatusManager.swift */; };
 		5BADB1B8273139170075D4BC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B0273139170075D4BC /* Networking.swift */; };
-		5BADB1B9273139170075D4BC /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B1273139170075D4BC /* NetworkPlugin.swift */; };
+		5BADB1B9273139170075D4BC /* ExamplePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B1273139170075D4BC /* ExamplePlugin.swift */; };
 		5BADB1BA273139170075D4BC /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B2273139170075D4BC /* ObservableExtension.swift */; };
 		5BADB1BB273139170075D4BC /* MyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B3273139170075D4BC /* MyResponse.swift */; };
 		5BADB1BC273139170075D4BC /* LoginRegisterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B5273139170075D4BC /* LoginRegisterApi.swift */; };
 		5BADB1BD273139170075D4BC /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1B6273139170075D4BC /* AppService.swift */; };
-		5BADB1BF273139360075D4BC /* EnDecryptTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1BE273139360075D4BC /* EnDecryptTool.swift */; };
+		5BADB1BF273139360075D4BC /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1BE273139360075D4BC /* NetworkTool.swift */; };
+		5BADB1C127325C8C0075D4BC /* PrintChinese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1C027325C8C0075D4BC /* PrintChinese.swift */; };
+		5BADB1C627327ABF0075D4BC /* MyNetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADB1C527327ABF0075D4BC /* MyNetworkLoggerPlugin.swift */; };
 		AC4DCA2640BDEF0D3196E237 /* Pods_Moya_Alamofire_HaHa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D47E32077FED296333E189 /* Pods_Moya_Alamofire_HaHa.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,12 +37,14 @@
 		5BADB1A7273137EC0075D4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BADB1AF273139170075D4BC /* NetworkStatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatusManager.swift; sourceTree = "<group>"; };
 		5BADB1B0273139170075D4BC /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		5BADB1B1273139170075D4BC /* NetworkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPlugin.swift; sourceTree = "<group>"; };
+		5BADB1B1273139170075D4BC /* ExamplePlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePlugin.swift; sourceTree = "<group>"; };
 		5BADB1B2273139170075D4BC /* ObservableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
 		5BADB1B3273139170075D4BC /* MyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyResponse.swift; sourceTree = "<group>"; };
 		5BADB1B5273139170075D4BC /* LoginRegisterApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegisterApi.swift; sourceTree = "<group>"; };
 		5BADB1B6273139170075D4BC /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
-		5BADB1BE273139360075D4BC /* EnDecryptTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnDecryptTool.swift; sourceTree = "<group>"; };
+		5BADB1BE273139360075D4BC /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		5BADB1C027325C8C0075D4BC /* PrintChinese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintChinese.swift; sourceTree = "<group>"; };
+		5BADB1C527327ABF0075D4BC /* MyNetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		8A367870A41675020B0819F3 /* Pods-Moya-Alamofire-HaHa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-Alamofire-HaHa.debug.xcconfig"; path = "Target Support Files/Pods-Moya-Alamofire-HaHa/Pods-Moya-Alamofire-HaHa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +103,9 @@
 		5BADB1AD273139170075D4BC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5BADB1BE273139360075D4BC /* EnDecryptTool.swift */,
+				5BADB1BE273139360075D4BC /* NetworkTool.swift */,
+				5BADB1C027325C8C0075D4BC /* PrintChinese.swift */,
+				5BADB1C227327A770075D4BC /* Plugin */,
 				5BADB1AE273139170075D4BC /* Core */,
 				5BADB1B4273139170075D4BC /* Api */,
 			);
@@ -111,7 +117,6 @@
 			children = (
 				5BADB1AF273139170075D4BC /* NetworkStatusManager.swift */,
 				5BADB1B0273139170075D4BC /* Networking.swift */,
-				5BADB1B1273139170075D4BC /* NetworkPlugin.swift */,
 				5BADB1B2273139170075D4BC /* ObservableExtension.swift */,
 				5BADB1B3273139170075D4BC /* MyResponse.swift */,
 			);
@@ -125,6 +130,15 @@
 				5BADB1B6273139170075D4BC /* AppService.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		5BADB1C227327A770075D4BC /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				5BADB1B1273139170075D4BC /* ExamplePlugin.swift */,
+				5BADB1C527327ABF0075D4BC /* MyNetworkLoggerPlugin.swift */,
+			);
+			path = Plugin;
 			sourceTree = "<group>";
 		};
 		BEFE4DD24A13356DE4087F03 /* Pods */ = {
@@ -251,11 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BADB1B9273139170075D4BC /* NetworkPlugin.swift in Sources */,
+				5BADB1B9273139170075D4BC /* ExamplePlugin.swift in Sources */,
 				5BADB1BD273139170075D4BC /* AppService.swift in Sources */,
+				5BADB1C127325C8C0075D4BC /* PrintChinese.swift in Sources */,
 				5BADB1BC273139170075D4BC /* LoginRegisterApi.swift in Sources */,
 				5BADB1BB273139170075D4BC /* MyResponse.swift in Sources */,
-				5BADB1BF273139360075D4BC /* EnDecryptTool.swift in Sources */,
+				5BADB1C627327ABF0075D4BC /* MyNetworkLoggerPlugin.swift in Sources */,
+				5BADB1BF273139360075D4BC /* NetworkTool.swift in Sources */,
 				5BADB19E273137E70075D4BC /* ViewController.swift in Sources */,
 				5BADB19A273137E70075D4BC /* AppDelegate.swift in Sources */,
 				5BADB1B7273139170075D4BC /* NetworkStatusManager.swift in Sources */,

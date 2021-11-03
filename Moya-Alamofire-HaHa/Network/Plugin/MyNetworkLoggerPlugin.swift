@@ -1,17 +1,38 @@
 //
-//  RequestPlugin.swift
-//  TouchainNFT
+//  MyNetworkLoggerPlugin.swift
+//  Moya-Alamofire-HaHa
 //
-//  Created by safiri on 2021/10/29.
+//  Created by safiri on 2021/11/3.
 //
 
 import Foundation
 import Moya
+import SwiftyJSON
 
+private var countE: Int = 0
 /// 修改 moya NetworkLoggerPlugin(因为他打印了一长串NSHTTPURLResponse信息)
 public final class MyNetworkLoggerPlugin: PluginType {
     public var configuration: NetworkLoggerPlugin.Configuration
-
+    
+    private var count: Int = {
+        countE+=1
+        return countE
+    }()
+    private var projectName: String = {
+        if let info = Bundle.main.infoDictionary,
+            let name = info["CFBundleExecutable"] as? String {
+            return name
+        } else {
+            return "Moya_Logger"
+        }
+    }()
+    
+    private var defaultEntryDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
+        return formatter
+    }()
+    
     /// Initializes a NetworkLoggerPlugin.
     /// 默认只打印 URL、Request Body、Response Body
     public init(configuration: NetworkLoggerPlugin.Configuration = NetworkLoggerPlugin.Configuration(logOptions: [.requestBody,.successResponseBody, .errorResponseBody])) {
@@ -52,12 +73,17 @@ private extension MyNetworkLoggerPlugin {
             completion([configuration.formatter.entry("Request", "(invalid request)", target)])
             return
         }
-
+        
         // Adding log entries for each given log option
         var output = [String]()
-
-        output.append(configuration.formatter.entry("Request", httpRequest.description, target))
-
+        output.append("[\(count)]request-************************************************-start")
+        output.append("""
+                \(projectName):\(defaultEntryDateFormatter.string(from: Date()))
+                Request URL -->
+                \(httpRequest.description)
+                """)
+//        output.append(configuration.formatter.entry("Request", httpRequest.description, target))
+        
         if configuration.logOptions.contains(.requestHeaders) {
             var allHeaders = request.sessionHeaders
             if let httpRequestHeaders = httpRequest.allHTTPHeaderFields {
@@ -72,8 +98,16 @@ private extension MyNetworkLoggerPlugin {
             }
 
             if let body = httpRequest.httpBody {
-                let stringOutput = configuration.formatter.requestData(body)
-                output.append(configuration.formatter.entry("Request Body", stringOutput, target))
+                //let stringOutput = String(data: body, encoding: .utf8)?.removingPercentEncoding ?? "just null"
+                //output.append(configuration.formatter.entry("Request Body", stringOutput, target))
+                output.append("""
+                Request Body -->
+                \(String(data: body, encoding: .utf8)?.removingPercentEncoding ?? "just null")
+                """)
+            }else {
+                output.append("""
+                Request Body --> is null
+                """)
             }
         }
 
@@ -81,14 +115,14 @@ private extension MyNetworkLoggerPlugin {
             let httpMethod = httpRequest.httpMethod {
             output.append(configuration.formatter.entry("HTTP Request Method", httpMethod, target))
         }
-
+        output.append("[\(count)]request-**************************************************-end")
         completion(output)
     }
 
     func logNetworkResponse(_ response: Response, target: TargetType, isFromError: Bool) -> [String] {
         // Adding log entries for each given log option
         var output = [String]()
-
+        output.append("[\(count)]response-************************************************-start")
         //Response presence check
         if let _ = response.response {
             // moya代码里默认打印了Response，这里注释掉，不打印了
@@ -99,11 +133,24 @@ private extension MyNetworkLoggerPlugin {
 
         if (isFromError && configuration.logOptions.contains(.errorResponseBody))
             || configuration.logOptions.contains(.successResponseBody) {
-
-            let stringOutput = configuration.formatter.responseData(response.data)
-            output.append(configuration.formatter.entry("Response Body", stringOutput, target))
+            var responseurl = ""
+            var responseBody = ""
+            if let httpResponse = response.response {
+                responseurl = httpResponse.url?.absoluteString ?? ""
+            }
+            do {
+                let jsonObject = try response.mapJSON()
+                responseBody = "\(JSON(jsonObject))" //利用JSON控制台打印汉字
+            } catch {
+                responseBody = configuration.formatter.responseData(response.data)
+            }
+            output.append("""
+                Response: \(responseurl)
+                Response Body -->
+                \(responseBody)
+                """)
         }
-
+        output.append("[\(count)]response-**************************************************-end")
         return output
     }
 
@@ -123,121 +170,4 @@ public extension MyNetworkLoggerPlugin {
     class var `default` : MyNetworkLoggerPlugin {
         return MyNetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: [.requestBody,.successResponseBody, .errorResponseBody]))
     }
-}
-
- class ExamplePlugin: PluginType {
-    func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
-        /// 这里做公共参数
-        //let target = target as! TouchainService
-        var parameters : [String: Any]?
-        if let requstData = request.httpBody {
-            do {
-                let json = try JSONSerialization.jsonObject(with: requstData, options: .mutableContainers)
-                parameters = json as? [String: Any]
-            } catch  {
-                /// 失败处理 ...
-            }
-        } else {
-            parameters = [String: Any]()
-        }
-        
-        /// 拼接公共参数
-        //parameters = paramsForPublicParmeters(parameters: parameters)
-        
-        /// 加密加签
-        //parameters = RSA.sign(withParamDic: parameters)
-        
-        do {
-            /// 替换 httpBody
-            if let parameters = parameters {
-                return try JSONEncoding.default.encode(request, with: parameters)
-            }
-        } catch  {
-            /// 失败处理 ...
-        }
-        
-        return request
-    }
-     
-     func process(_ result: Result<Response, MoyaError>, target: TargetType) -> Result<Response, MoyaError> {
-         if case .success(let response) = result {
-             do {
-                 // responseString
-                 let _ = try response.mapJSON()
-                 
-                 /*
-                  /// Json 转成 字典
-                  let dic =  JsonToDic(responseString)
-                  
-                  /// 验签
-                  if let _ = SignUntil.verifySign(withParamDic: dic) {
-                  
-                  /// 数据解密
-                  dic = RSA.decodeRSA(withParamDic: dic)
-                  
-                  /// 重新生成 Moya.response
-                  /// ...
-                  
-                  /// 返回 Moya.response
-                  return .success(response)
-                  } else {
-                  let error = NSError(domain: "验签失败", code: 1, userInfo: nil)
-                  return .failure(MoyaError.underlying(error, nil))
-                  }
-                  */
-                 return .success(response)
-             } catch {
-                 let error = NSError(domain: "拦截器 response 转 json 失败", code: 1, userInfo: nil)
-                 return .failure(MoyaError.underlying(error, nil))
-             }
-         }else {
-             /// 原本就失败了就丢回了
-             return result
-         }
-     }
-}
-
-/// 使用 Moya NetworkLoggerPlugin
-final class PrintLogPlugin: PluginType {
-    
-    func Log<T>(_ message: T, file: String = #file, function: String = #function, line: Int = #line) {
-        print("\(file):\(line)\(function) | \(message)")
-    }
-    /// 准备发送的时候拦截打印日志
-    public func willSend(_ request: RequestType, target: TargetType) {
-        /// 请求日志打印
-        /// request.request?.url?.absoluteString
-        if let httpBody = request.request?.httpBody {
-            print("""
-                请求参数=======> \(target.path)
-                \(String(data: httpBody, encoding: .utf8)?.removingPercentEncoding ?? "just null")
-                
-                """)
-        }else {
-            print("""
-                请求参数=======> \(target.path) null found
-                
-                """)
-        }
-    }
-    
-    /// 将要接受的时候拦截打印日志
-    public func didReceive(_ result: Result<Moya.Response, MoyaError>, target: TargetType) {
-#if DEBUG
-        switch result {
-        case .success(let response):
-            do {
-                let jsonObject = try response.mapJSON()
-                print("请求成功:\(jsonObject)")
-            } catch {
-                print("请求成功=====> \(target.path) \(String(data: response.data, encoding: .utf8) ?? "")")
-            }
-            break
-        case .failure(let error):
-            print("请求失败=====> \(target.path) \(error)")
-            break
-        }
-#endif
-    }
-    
 }
