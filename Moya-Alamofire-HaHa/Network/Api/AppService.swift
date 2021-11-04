@@ -5,8 +5,8 @@
 //  Created by safiri on 2021/10/28.
 //
 
-//let BASE_URL = "http://wlys.qiluys.cn/erdos_security"
-let BASE_URL = "http://wlys.qiluys.cn/yunshun"
+
+let BASE_URL = ""
 
 import Moya
 import SwiftUI
